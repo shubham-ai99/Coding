@@ -10,7 +10,7 @@ public class SecondSmallestNumber {
 
     public void FindSecondSmallestElement(int[] nums){
 
-        System.out.println(" 2nd highest Array elements ");
+        System.out.println(" 2nd smallest Array elements ");
         int secondSmallestNumber= Arrays.stream(nums).distinct().
                 sorted().skip(1). findFirst().
                 orElseThrow(() -> new IllegalArgumentException("Array doesn't have 2nd smallest number")) ;

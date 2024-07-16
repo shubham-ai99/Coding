@@ -3,7 +3,7 @@ package ArrayList;
 import java.util.ArrayList;
 
 
-public class ArraListBasic {
+public class ArrayListBasic {
     public static void main(String[] args) {
         // Creating an ArrayList of strings
         ArrayList<String> names = new ArrayList<>();

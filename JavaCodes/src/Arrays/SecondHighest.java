@@ -1,26 +1,35 @@
 package Arrays;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 public class SecondHighest {
 
-    public static void FindSecondSmallestElement(int[] nums){
 
-        System.out.println(" 2nd highest Array elements ");
-        int secondSmallestNumber= Arrays.stream(nums).distinct(). sorted().skip(1). findFirst().orElseThrow();
-        System.out.println(secondSmallestNumber);
-    }
 
-    public static void main(String[] args) {
-        System.out.println(" Array elements ");
-        int[] nums=   {1,1,1,4,9,3,13,2};//declaration, instantiation and initialization
-        for (int i = 0; i < nums.length; i++) {
-            System.out.println(nums[i]);
+        public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
+
+        Optional<Integer> secondHighest = numbers.stream()
+                .distinct() // To remove duplicates
+                .sorted((a, b) -> b - a) // Sort in descending order
+                .skip(1) // Skip the highest number
+                .findFirst(); // Get the second highest number
+
+        if (secondHighest.isPresent()) {
+            System.out.println("The second highest number is: " + secondHighest.get());
+        } else {
+            System.out.println("The list doesn't have enough unique numbers.");
         }
-
-        FindSecondSmallestElement(nums);
-
-
     }
-
 }
+
+//
+//import java.util.Arrays;
+//        import java.util.List;
+//        import java.util.Optional;
+//
+//public class SecondHighestNumber {
+//
+//}

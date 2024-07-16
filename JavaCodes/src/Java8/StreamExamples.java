@@ -21,6 +21,17 @@ public class StreamExamples{
         List<Integer> uniqueNames = values.stream().distinct().collect(Collectors.toList());
         System.out.println(uniqueNames);
     }
+
+
+
+
+    public static void main(String[] args){
+
+        StreamExamples streamExamples = new StreamExamples();
+        streamExamples.StreamOperation();
+        streamExamples.forEachMethod();
+
+    }
 }
 
 

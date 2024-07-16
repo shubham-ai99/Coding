@@ -3,7 +3,7 @@ package String;
 public class ReverseString {
 
     static  String reverseFunction(String str){
-        char ch[] = str.toCharArray();
+        char[] ch = str.toCharArray();
         int left =0;
         int right = str.length() - 1;
 
